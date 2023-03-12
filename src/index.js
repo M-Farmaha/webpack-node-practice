@@ -31,5 +31,15 @@
 
 // console.log(sum(2, 3));
 
+import "./styles/style.css";
 
-import './styles/style.css'
+import { base } from "./data/hbsData";
+console.log(base);
+import taskFirst from "./temporary/handleFirst.hbs";
+console.log(taskFirst);
+
+const markUp = taskFirst(base);
+console.log(markUp);
+
+const root = document.querySelector("#root");
+root.insertAdjacentHTML("beforeend", markUp);
